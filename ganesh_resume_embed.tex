@@ -7,7 +7,6 @@
 % available at http://www.latex-project.org/lppl/.
 
 \documentclass[10pt,a4paper]{moderncv}
-
 \usepackage{verbatim}
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption}
 
@@ -32,7 +31,8 @@
 \title{Curriculum Vitae}
 \address{TC 23/692, Valiyasala,
 Chalai.P.O,Trivandrum}{Kerala, India - 695036}
-\phone{+91-9446242358}
+%\phone{+91-9446242358}
+\mobile{+91-9446242358}
 \email{ganeshredcobra@gmail.com}
 %\homepage{http://markliu.me}                % optional, remove the line if not wanted
 %\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
@@ -67,7 +67,7 @@ Developed and implemented many applications using various free software tools.Co
 \cventry{February 2010 -- present}{Freelance Hacker}{}{}{}{
 A Freelance programmer and consultant on Free and Open Source Software based technologies(GNU/Linux,Python,Embedded Linux etc).}
 \cventry{July 2009 -- January 2010}{Lecturer cum Support Engineer}{                                            IRS Informatics India pvt Ltd}{}{}{
-Worked as Lecturer cum Support Engineer in Department of Instrumentation and Automation of IRS Informatics India pvt Ltd, Thrissur from July 2009 to January 2010,in their projects for C-DIT and KELTRON.Works include conduct theory aand practical classes for the course Diploma in Computerised Instrumentation.
+Worked as Lecturer cum Support Engineer in Department of Instrumentation and Automation of IRS Informatics India pvt Ltd, Thrissur from July 2009 to January 2010,in their projects for C-DIT and KELTRON.Works include conduct theory and practical classes for the course Diploma in Computerised Instrumentation.
 } 
 
 
@@ -79,30 +79,34 @@ Worked as Lecturer cum Support Engineer in Department of Instrumentation and Aut
 \cvline{\textbf{Microcontroller's \& Dev Boards}}{PIC 16F877A,TI MSP430,STM32F4Discovery,Mini2440(Arm 9),AtmelAVR.}
 \cvline{\textbf{IDE's Used}}{Eclipse,Code Composer Studio,MPLab,Arduino.}
 \cvline{\textbf{Development Tools used}}{GNU Tools,Git,Vim.}
-\cvline{\textbf{Protocols}}{I2C, SPI, RS232,CAN.}
+\cvline{\textbf{Protocols}}{I2C, SPI, RS232.}%Removed CAN%
 \cvline{\textbf{Circuit/PCB Design}}{Eagle PCB,Kicad.}
 \cvline{\textbf{PLC's Used}}{Siemens -S7300(Simatic Manager),Siemens -S7200(Step7 Microwin),AB Micrologix 1000(RSLogix 500).}
 \cvline{\textbf{HMI}}{Siemens TP177B(Touch Panel).}
+
+
 \section{Project Works}
 \subsection{Academic Projects}
 \cvline{Mini Project Home Security System }{It is having various sensors incorporated in it for the detection of intruders and some sensors to sense some natural mishaps like fire etc. It is having a temperature sensor(LM 35), a smoke sensor and a motion detector(PIR Sensor). A receiver is there to show the signal if anyone of the sensor is active it can be taken to a distant place according to the power of the transmitter and receiver(TWS \& RWS 434).}
 \cvline{Main Project Image Fusion/Mosaicing}{Many problems require finding the coordinate transformation between two images of the same scene or object. One of them is Image Mosaicing/ Image warping. It is important to have a precise description of the coordinate transformation between a pair of images. Image mosaics are collection of overlapping images together with coordinate transformations that relate the different image coordinate systems. By applying the appropriate transformations via a warping operation and merging the overlapping regions of a warped image, it is possible to construct a single image covering the entire visible area of the scene. This merged single image is the motivation for the term ``mosaic''. The project is  implemented in MATLAB.}
 \subsection{Freelance Electronics/Robotics Projects}
-\cvline{}{\textbf{Light Controlled Switch} -  can be used to switch ON an incandescent bulb (or any appliance) automatically during the evening time i.e., when the sun light fades. The circuit consisted of a 555 Timer (used as Comparator) and LDR (Light Sensor).}
+\cvline{}{\textbf{RFID Based Access Control Sysytem} -  This project uses PIC 16F877A Controller and a pre-built RFID reader module to interrogate commonly-available passive tags, looks up the tag ID in an internal database, and release a lock if the tag is authorised.}
 \cvline{}{\textbf{Water Tank Level Indicating and Controlling System using LDR} - had two special features that other level controlling systems in the market lacked – low cost implementation and elimination of all kind of immersions into the water. The op-amp IC LM324 and a LDR were used to realize the circuit.}
 \cvline{}{\textbf{Arduino Voltmeter} - Arduino board uses ATmega series of Microcontrollers of Atmel AVR Family. The range of the voltmeter will be between 0 and 10 volts DC – ideal for testing batteries and cells before they head to the garbage bin.}
 \cvline{}{\textbf{Light Chasing Robot} – A simple robot that follows the light (in a dark room). It used LDR as the light sensor.}
 \cvline{}{\textbf{Line Following Robot} – A highly useful robot that could follow the line drawn on a surface. An IR LED was the sensor used.}
 \cvline{}{\textbf{PC Controlled Robot} – A robot that could be navigated through a particular path using a computer. It worked by processing the data received from a computer’s serial port with microcontroller (Arduino).}
 \cvline{}{\textbf{Obstacle Avoiding Robot} – This robot could take a deviation in its path whenever it detected any obstacle that blocked its path. IR LED was used to detect the obstacle.}
-\cvline{}{\textbf{Sound Operated Robot} – A robot that responds to the sound (eg: a clap). It is programmed to deviate its path when it detects a sound signal. The sensor used wasa normal microphone.}
+%\cvline{}{\textbf{Sound Operated Robot} – A robot that responds to the sound (eg: a clap). It is programmed to deviate its path when it detects a sound signal. The sensor used was a normal microphone.}
 \cvline{}{\textbf{Email Controlled Home Appliances}-Home Appliances can be controlled using email.The project uses Arduino board and a python script which helps to fetch mail and reply.} 
 \subsection{Software Projects}
 \cvline{}{Customisation of  Python based software for conducting IT examination for IT@SCHOOL.} 
 \cvline{}{Various scripts (Python\& shell) for System Administration.}
-\cvline{}{Linux OS Customization (Remastersys)}
+\cvline{}{Linux OS Customization (Remastersys \& commandline)}
 \cvline{}{Hacking Microsoft Kinect using Processing and libfreenect libraries.}
 %\cvline{}{}
+
+
 \section{Trainings \& Workshops Undergone}
 \cvline{}{Attended training by SIEMENS on Simatic S7-300. The course included S7-300 series PLC’s programming, communication, connections, interfacing etc. Also a touch screen HMI panel – TP177B.}
 \cvline{}{Attended a workshop on Microcontroller based Robotics (level III) conducted by LI2 Innovations, Bangalore and Govt: Engineering College, Thrissur.(Arduino)}
@@ -114,11 +118,20 @@ Worked as Lecturer cum Support Engineer in Department of Instrumentation and Aut
 \cvline{}{Participated in International Conference on Sagemath held at IIT-Bombay.}
 \cvline{}{Participated in Open Solaris workshop held at College of Engineering Trivandrum.}
 
+\section{Talks \& Workshops}
+\cventry{September 2012}{Training of Assistive Technologies}{Jawaharlal Nehru University,New Delhi}{}{}{Workshop on Open Accessibility and assistive technology.}
+\cventry{August 2012}{FOSS tools for science and engineering.}{SB College Changanacherry}{}{}{Introduction to open hardware and other open source scientific computing packages.}
+\cventry{June 2012}{\LaTeX Workshop}{Amal Jyothi College of Engineering,Kanjirapally}{}{}{\LaTeX workshop for  Faculties from AICTE, UGC approved Institutions, researchers from industries and PG scholars.}
+\cventry{May 2012}{Linux System Administartion Training.}{Institute of Management in Government (IMG), Trivandrum}{}{}{Introduction to GNU/Linux System Administration.}
+\cventry{January 2012}{Introduction To Python And FOSS Technologies.}{Govt. Polytechnic, Trikaripur}{}{}{Python workshop,Python's capabilities and alternatives in FOSS against proprietary software}
+\cventry{November 2011}{Workshop on FOSS Tools  for research scholars.}{Government College of Teacher Education, Thycaud, Thiruvananthapuram}{}{}{Workshop on FOSS tools for PhD research scholars.}
+%\cventry{September 2012}{Introduction To Webdevelopment using FOSS.}{Younus College of Engineering and Technology,Kollam}{}{}{Introduction to web development using FOSS tools such as Wordpress and Drupal etc.}
+
 \section{Interests \& Hobbies.}
 \cvline{}{An avid reader on technology, fiction and non-fiction books and websites.}
 \cvline{}{Making Hobby circuits.}
 \cvline{}{Trouble shooting problems in computers \& Ubuntu Linux.}
-\cvline{}{Scripting using Python nad Bash.}
+\cvline{}{Scripting using Python and Bash.}
 
 \section{Blog \& Code.}
 %\begin{minipage}{.5\linewidth}
