@@ -7,6 +7,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 \documentclass[10pt,a4paper]{moderncv}
+%\usepackage[english]{babel}
 \usepackage{verbatim}
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption}
 
@@ -29,8 +30,7 @@
 \firstname{Ganesh}
 \familyname{H}
 \title{Curriculum Vitae}
-\address{TC 23/692, Valiyasala,
-Chalai.P.O,Trivandrum}{Kerala, India - 695036}
+\address{TC 23/692, Valiyasala,Chalai.P.O,Trivandrum}{Kerala, India - 695036}
 %\phone{+91-9446242358}
 \mobile{+91-9446242358}
 \email{ganeshredcobra@gmail.com}
@@ -48,7 +48,6 @@ Chalai.P.O,Trivandrum}{Kerala, India - 695036}
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
-
 \section{Education}
 \cventry{2005--2009}{B.Tech, Applied Electronics \& Instrumentation Engineering}{University of Kerala}{}{}{}
 \cvline{College:}{\small P.A.Aziz College of Engineering \& Technology}
@@ -65,8 +64,6 @@ Chalai.P.O,Trivandrum}{Kerala, India - 695036}
 Design,develop \& debug embedded firmware and software for 8,16,32 bit Microcontrollers.Design \& develop projects for Arm and embedded Linux platforms.\\ \url{http://www.dthoughts.com 
 }  
 }
-
-
 \cventry{}{Job responsiblities}{}{}{}{
 Embedded Firmware \& Software programming and test on microcontroller-based products.\\
 Single board Computer \& Embedded Linux based development.\\
@@ -78,8 +75,6 @@ Design \& develop projects on ARM Series .\\
 Developed and implemented many applications using various free software tools.Conducted research on using free software tools for scientific computing,Embedded Linux \& System Administration.\\ \url{http://space-kerala.org 
 }  
 }
-
-
 \cventry{}{Job responsiblities}{}{}{}{
 Customization, deployment and maintenance of Linux distribution on different hardware
 platforms.\\
@@ -96,15 +91,15 @@ Conduct research on open hardware \& FOSS in Science  Engineering.\\
 Worked as Lecturer cum Support Engineer in Department of Instrumentation and Automation of IRS Informatics India pvt Ltd, Thrissur from July 2009 to January 2010,in their projects for C-DIT and KELTRON.Works include conduct theory and practical classes for the course Diploma in Computerised Instrumentation.
 } 
 
-\newpage{}
+
 \section{Technical Skills}
 %\subsection{Have Experience With}
 \cvline{\textbf{Programming Languages}}{C,Assembly,Embedded C,Python,HTML/CSS,Bash Scripting,Processing.}%,Matlab
 \cvline{\textbf{Operating Systems}}{Proficient in Debian,Ubuntu/Kubuntu Linux and other Linux variants, Windows 9x, XP, Vista, Virtualization of Windows \& Linux guests using Sun VirtualBox.Have good experience in GNU/Linux system administration and Shell scripting(BASH).}
 \cvline{\textbf{Authoring \& Graphics}}{\LaTeX\ ,\LaTeX Beamer ,Open Office , GIMP.}
 %\cvline{\textbf{Microcontroller's \& Dev Boards}}{PIC 16F877A,TI MSP430,STM32F4Discovery,Mini2440(Arm 9),AtmelAVR.}
-\cvline{\textbf{Microcontroller's}}
-{ Microchip - PIC 16F877A,PIC 18F25K80.\newline
+\cvline{\textbf{Microcontroller \& Dev Boards}}
+{Microchip - PIC 16F877A,PIC 18F25K80.\newline
 Atmel AVR - ATmega8,ATmega168,ATmega328,tinyAVR.\newline
 Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series(ARM Cortex).
 }
@@ -119,6 +114,8 @@ Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series(ARM Cortex
 \section{Project Works}
 \cvline{Dthoughts Systems}{\textbf{CANMate Linux} - CANMATE is a high performing , low cost CAN to USB converter suitable to sniff any CAN network operating at or near full load and at full speed. Any CAN network can me analyzed using CANMATE device with the help of associated GUI tools.Was key player in developing GNU/Linux version of CANMate.Developed Linux packages and shared objects for the project.The product uses PIC18F25K80 controller}
 \cvline{Dthoughts Systems}{\textbf{Bluetooth Low Energy Project} - Implemented automatic SPPLE Server based pairing and communication between MSP430F5438A along with PAN 1323 BLE Module and smart phone.The project uses Bluetopia bluetooth stack by Stonestreet One.The project uses MSP-FET430UIF which is used to program and debug MSP430 FET tools and test boards through the JTAG interface.}
+\cvline{Dthoughts Systems}{\textbf{Streaming server in Beagle Bone Black} - Converting Beagle Bone Balck to video streaming server.The project uses MJPG streamer. MJPG-streamer takes JPGs from Linux-UVC compatible webcams, filesystem or other input plugins and streams them as M-JPEG via HTTP to webbrowsers, VLC and other software.}
+\cvline{Dthoughts Systems}{\textbf{ECU Simulator Linux} - ECUSimLite Linux is a free PC application which uses CANMate device and CANMate API to implement ISO15765 compliant OBD2 ECU simulation.This can be used to test devices like OBD port readers without the need to connect to a vehicle.}
 %\subsection{Academic Projects}
 \cvline{SPACE}{\textbf{Home Security System} -It is having various sensors incorporated in it for the detection of intruders and some sensors to sense some natural mishaps like fire etc. It is having a temperature sensor(LM 35), a smoke sensor and a motion detector(PIR Sensor). A receiver is there to show the signal if anyone of the sensor is active it can be taken to a distant place according to the power of the transmitter and receiver(TWS \& RWS 434).This project uses PIC 16F877A Controller.}
 %\cvline{Main Project Image Fusion/Mosaicing}{Many problems require finding the coordinate transformation %between two images of the same scene or object. One of them is Image Mosaicing/ Image warping. It is %important to have a precise description of the coordinate transformation between a pair of images. Image %mosaics are collection of overlapping images together with coordinate transformations that relate the %different image coordinate systems. By applying the appropriate transformations via a warping operation and %merging the overlapping regions of a warped image, it is possible to construct a single image covering the %entire visible area of the scene. This merged single image is the motivation for the term ``mosaic''. The %project is  implemented in MATLAB.}
@@ -164,6 +161,7 @@ Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series(ARM Cortex
 \cvline{}{Got media coverage and appreciation for developing kinect based apps for autistic kids.}
 
 \section{Talks \& Workshops Conducted}
+\cventry{Februray 2014}{Introduction to Open Hardware}{National Institute of Technology , Calicut}{}{}{Handson workshop on Arduino and Processing.}
 \cventry{September 2012}{Training of Assistive Technologies}{Jawaharlal Nehru University,New Delhi}{}{}{Workshop on Open Accessibility and assistive technology.}
 \cventry{August 2012}{FOSS tools for science and engineering.}{SB College Changanacherry}{}{}{Introduction to open hardware and other open source scientific computing packages.}
 \cventry{June 2012}{\LaTeX Workshop}{Amal Jyothi College of Engineering,Kanjirapally}{}{}{\LaTeX workshop for  Faculties from AICTE, UGC approved Institutions, researchers from industries and PG scholars.}
