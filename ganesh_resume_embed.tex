@@ -10,7 +10,6 @@
 %\usepackage[english]{babel}
 \usepackage{verbatim}
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption}
-
 % moderncv themes
 \moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 %\moderncvtheme[green]{classic}                % idem
@@ -26,6 +25,67 @@
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{10cm}}
 \AtBeginDocument{\recomputelengths}
 % personal data
+\newcommand*{\skypesymbol} {%
+\protect\raisebox{-0.085em}{%
+\protect\begin{tikzpicture}[y=0.08em,x=0.08em,xscale=0.022,yscale=-0.022, inner sep=0pt, outer sep=0pt]
+ \protect\path[fill=color2,even odd rule] (487.6550,288.9690) .. controls (489.0610,278.5690) and
+ (489.8700,267.9960) .. (489.8700,257.2330) .. controls (489.8700,128.0770) and
+ (384.5990,23.3610) .. (254.7670,23.3610) .. controls (241.8630,23.3610) and
+ (229.2120,24.4210) .. (216.9010,26.4410) .. controls (194.8280,12.0570) and
+ (168.5590,3.6740) .. (140.2880,3.6740) .. controls (62.7660,3.6740) and
+ (0.0000,66.4820) .. (0.0000,143.9800) .. controls (0.0000,172.1780) and
+ (8.2990,198.3740) .. (22.5900,220.3690) .. controls (20.6650,232.3860) and
+ (19.6810,244.6920) .. (19.6810,257.2290) .. controls (19.6810,386.4050) and
+ (124.8980,491.1100) .. (254.7660,491.1100) .. controls (269.4230,491.1100) and
+ (283.6930,489.6840) .. (297.5620,487.1780) .. controls (319.1120,500.5470) and
+ (344.4960,508.3260) .. (371.7080,508.3260) .. controls (449.2100,508.3260) and
+ (512.0010,445.5020) .. (512.0010,368.0120) .. controls (511.9980,338.7190) and
+ (503.0410,311.4840) .. (487.6550,288.9690) -- cycle(276.7400,429.5960) ..
+ controls (202.0340,433.4870) and (167.0750,416.9590) .. (135.0500,386.9050) ..
+ controls (99.2850,353.3370) and (113.6520,315.0500) .. (142.7900,313.1040) ..
+ controls (171.9120,311.1590) and (189.3980,346.1160) .. (204.9410,355.8400) ..
+ controls (220.4650,365.5280) and (279.5340,387.6000) .. (310.7350,351.9320) ..
+ controls (344.7100,313.1040) and (288.1410,293.0120) .. (246.6760,286.9300) ..
+ controls (187.4730,278.1640) and (112.7260,246.1370) .. (118.5410,183.0230) ..
+ controls (124.3580,119.9490) and (172.1230,87.6090) .. (222.3910,83.0470) ..
+ controls (286.4680,77.2300) and (328.1820,92.7540) .. (361.1760,120.9070) ..
+ controls (399.3270,153.4360) and (378.6840,189.8010) .. (354.3770,192.7270) ..
+ controls (330.1660,195.6360) and (302.9730,139.2230) .. (249.5860,138.3750) ..
+ controls (194.5590,137.5110) and (157.3690,195.6360) .. (225.3000,212.1590) ..
+ controls (293.2660,228.6640) and (366.0500,235.4450) .. (392.2610,297.5760) ..
+ controls (418.4900,359.7130) and (351.5070,425.7010) .. (276.7400,429.5960) --
+ cycle;
+  \protect\end{tikzpicture}}%
+    ~}
+    
+\makeatletter
+% defines one's email (optional)
+% usage: \email{<email adress>}
+\newcommand*{\skype}[1]{\def\@skype{#1}}
+\renewcommand*{\makecvfooter}{%
+  \setlength{\footerwidth}{0.8\textwidth}%
+  \fancypagestyle{plain}{%
+    \fancyfoot[c]{%
+      \parbox[b]{\footerwidth}{%
+        \centering%
+        \color{color2}\addressfont%
+        \vspace{\baselineskip}% forces a white line to ensure space between main text and footer (as footer height can't be known in advance)
+            \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
+              \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
+              \ifthenelse{\equal{\@addresscountry}{}}{}{\addtofooter[~--~]{\@addresscountry}}%
+              \flushfooter\@firstfooterelementtrue\\}%
+            \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
+              \addtofooter{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
+            \ifthenelse{\isundefined{\@email}}{}{\addtofooter{\emailsymbol\emaillink{\@email}}}%
+            \ifthenelse{\isundefined{\@homepage}}{}{\addtofooter{\homepagesymbol\httplink{\@homepage}}}%
+            \ifthenelse{\isundefined{\@skype}}{}{\addtofooter{\skypesymbol\@skype}}%
+            \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
+              \addtofooter{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
+            \ifthenelse{\isundefined{\@extrainfo}}{}{\addtofooter{\@extrainfo}}%
+            \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
+            }}}%
+\pagestyle{plain}}
+\makeatother
 % personal data
 \firstname{Ganesh}
 \familyname{H}
@@ -34,6 +94,7 @@
 %\phone{+91-9446242358}
 \mobile{+91-9446242358}
 \email{ganeshredcobra@gmail.com}
+\extrainfo{\skypesymbol ganeshredcobra}
 %\homepage{http://markliu.me}                % optional, remove the line if not wanted
 %\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
 
@@ -61,7 +122,7 @@
 
 \section{Work Experience}
 \cventry{August 2013 -- Present}{Embedded Software Engineer}{Deep Thought Systems Pvt Ltd}{}{}{
-Design,develop \& debug embedded firmware and software for 8,16,32 bit Microcontrollers.Design \& develop projects for Arm and embedded Linux platforms.\\ \url{http://www.dthoughts.com 
+Design,develop \& debug embedded firmware and software for 8,16,32 bit Microcontrollers.Design \& develop projects for Embedded Automotive and Embedded Linux platforms.\\ \url{http://www.dthoughts.com 
 }  
 }
 \cventry{}{Job responsiblities}{}{}{}{
@@ -69,7 +130,7 @@ Embedded Firmware \& Software programming and test on microcontroller-based prod
 Single board Computer \& Embedded Linux based development.\\
 Interfacing of sensor modules to microcontrollers.\\
 Research \& Development of company products.\\
-Design \& develop projects on ARM Series .\\
+Design \& develop projects on Embedded Automotive domain .\\
 }
 \cventry{February 2010 -- July 2013}{Software Engineer}{Society for Promotion of Alternative Computing and Employment}{}{}{
 Developed and implemented many applications using various free software tools.Conducted research on using free software tools for scientific computing,Embedded Linux \& System Administration.\\ \url{http://space-kerala.org 
@@ -94,28 +155,35 @@ Worked as Lecturer cum Support Engineer in Department of Instrumentation and Aut
 
 \section{Technical Skills}
 %\subsection{Have Experience With}
-\cvline{\textbf{Programming Languages}}{C,Assembly,Embedded C,Python,HTML/CSS,Bash Scripting,Processing.}%,Matlab
+\cvline{\textbf{Programming Languages}}{\hspace{0.1cm}Assembly, Embedded C, Python, HTML/CSS, Bash Scripting, Processing.}%,Matlab
 \cvline{\textbf{Operating Systems}}{Proficient in Debian,Ubuntu/Kubuntu Linux and other Linux variants, Windows 9x, XP, Vista, Virtualization of Windows \& Linux guests using Sun VirtualBox.Have good experience in GNU/Linux system administration and Shell scripting(BASH).}
 \cvline{\textbf{Authoring \& Graphics}}{\LaTeX\ ,\LaTeX Beamer ,Open Office , GIMP.}
 %\cvline{\textbf{Microcontroller's \& Dev Boards}}{PIC 16F877A,TI MSP430,STM32F4Discovery,Mini2440(Arm 9),AtmelAVR.}
-\cvline{\textbf{Microcontroller \& Dev Boards}}
-{Microchip - PIC 16F877A,PIC 18F25K80.\newline
+\cvline{\textbf{Controller's}}
+{NXP - LPC 17XX Series. \newline
+FreeScale - i.MX 28 Series. \newline
+Microchip - PIC 16F877A,PIC 18F25K80.\newline
 Atmel AVR - ATmega8,ATmega168,ATmega328,tinyAVR.\newline
-Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series(ARM Cortex).
+Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series.
 }
-\cvline{\textbf{IDE's Used}}{Eclipse,Code Composer Studio,MPLab,Keil,Arduino.}
-\cvline{\textbf{Development Tools used}}{GNU Tools,Git,Vim.}
-\cvline{\textbf{Protocols}}{I2C, SPI, RS232.}%Removed CAN%
+\cvline{\textbf{IDE's}}{Eclipse,Code Composer Studio,MPLab,Keil,Arduino.}
+\cvline{\textbf{Development Tools}}{GNU Tools,Git,SVN,Vim.}
+\cvline{\textbf{CAN Tools}}{Microchip CAN Analyzer, CANMATE, VECTOR CANalyzer, NeoVI, Kvaser}
+\cvline{\textbf{Protocols}}{CAN, I2C, SPI, RS232.}
+\cvline{\textbf{Standards}}{ANSI C, J1979, J1939.}
 \cvline{\textbf{Circuit/PCB Design}}{Eagle PCB,Kicad.}
 \cvline{\textbf{PLC's Used}}{Siemens -S7300(Simatic Manager),Siemens -S7200(Step7 Microwin),AB Micrologix 1000(RSLogix 500).}
 \cvline{\textbf{HMI}}{Siemens TP177B(Touch Panel).}
 
 
 \section{Project Works}
-\cvline{Dthoughts Systems}{\textbf{CANMate Linux} - CANMATE is a high performing , low cost CAN to USB converter suitable to sniff any CAN network operating at or near full load and at full speed. Any CAN network can me analyzed using CANMATE device with the help of associated GUI tools.Was key player in developing GNU/Linux version of CANMate.Developed Linux packages and shared objects for the project.The product uses PIC18F25K80 controller}
+\cvline{Dthoughts Systems}{\textbf{Vehicle specific firmware development / Onsite Dev} - This was an Onsite assignment.The client is a famous automotive after market perfomance and race products company at California,USA.The task were to reverse engineer factory scantool and find vehicle specific pids and add that PID's to their existing firmware ,Add J1939 support to their existing firmware, Solve Dynamic PGN and add UDS support to the firmware.The controller used is LPC1768.}
+\cvline{Dthoughts Systems}{\textbf{CANMate Linux} - CANMATE is a high performing , low cost CAN to USB converter suitable to sniff any CAN network operating at or near full load and at full speed. Any CAN network can be analyzed using CANMATE device with the help of associated GUI tools.Was key player in developing GNU/Linux version of CANMate.Developed Linux packages and shared objects for the project.The product uses PIC18F25K80 controller.}
+\cvline{Dthoughts Systems}{\textbf{ECU Simulator Linux} - ECUSimLite Linux is a free PC application which uses CANMate device and CANMate API to implement ISO15765 compliant OBD2 ECU simulation.This can be used to test devices like OBD port readers without the need to connect to a vehicle.}
+\cvline{Dthoughts Systems}{\textbf{J1939 Simulator} - The J1939 simulator is a valuable tool for the development and testing of diagnostic programs and hardware. It simulates a Truck ECU .This simulator has 5 user-adjustable PIDs using 5 potentiometer , 5 live data can be changed and 6 fixed PGN values are provided. Pressing DTC button the trouble codes are generated and the MIL LED is ON. DM11 commands clear the DTCs and the MIL LED. Connection to the tester is provided via a J1962 female OBD port .ECU source address is 0x00.The Simulator supports DM1,DM5 \& DM11 Diagnostic Trouble Code messages.}
+\cvline{Dthoughts Systems}{\textbf{BSP porting and customization of LINUX on i.MX28 processor} - The aim of this project is to port and customize Board Support Package of Linux operating system on FreeScale i.MX28 processor based embedded board with the help of Linux Target Image Builder to configure WiFi and Bluetooth. The WiFi and Bluetooth driver is compiled with cross-compiler that released with i.mx28 linux BSP(LTIB) and installed its firmware.The wireless tools,bluetooth commands are used to configure WiFi and Bluetooth on board.Configured Linux Socket CAN interface to send and receive CAN messages.}
 \cvline{Dthoughts Systems}{\textbf{Bluetooth Low Energy Project} - Implemented automatic SPPLE Server based pairing and communication between MSP430F5438A along with PAN 1323 BLE Module and smart phone.The project uses Bluetopia bluetooth stack by Stonestreet One.The project uses MSP-FET430UIF which is used to program and debug MSP430 FET tools and test boards through the JTAG interface.}
 \cvline{Dthoughts Systems}{\textbf{Streaming server in Beagle Bone Black} - Converting Beagle Bone Balck to video streaming server.The project uses MJPG streamer. MJPG-streamer takes JPGs from Linux-UVC compatible webcams, filesystem or other input plugins and streams them as M-JPEG via HTTP to webbrowsers, VLC and other software.}
-\cvline{Dthoughts Systems}{\textbf{ECU Simulator Linux} - ECUSimLite Linux is a free PC application which uses CANMate device and CANMate API to implement ISO15765 compliant OBD2 ECU simulation.This can be used to test devices like OBD port readers without the need to connect to a vehicle.}
 %\subsection{Academic Projects}
 \cvline{SPACE}{\textbf{Home Security System} -It is having various sensors incorporated in it for the detection of intruders and some sensors to sense some natural mishaps like fire etc. It is having a temperature sensor(LM 35), a smoke sensor and a motion detector(PIR Sensor). A receiver is there to show the signal if anyone of the sensor is active it can be taken to a distant place according to the power of the transmitter and receiver(TWS \& RWS 434).This project uses PIC 16F877A Controller.}
 %\cvline{Main Project Image Fusion/Mosaicing}{Many problems require finding the coordinate transformation %between two images of the same scene or object. One of them is Image Mosaicing/ Image warping. It is %important to have a precise description of the coordinate transformation between a pair of images. Image %mosaics are collection of overlapping images together with coordinate transformations that relate the %different image coordinate systems. By applying the appropriate transformations via a warping operation and %merging the overlapping regions of a warped image, it is possible to construct a single image covering the %entire visible area of the scene. This merged single image is the motivation for the term ``mosaic''. The %project is  implemented in MATLAB.}
@@ -139,7 +207,7 @@ Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series(ARM Cortex
 
 \subsection{Software Projects}
 \cvline{}{Customisation of  Python based software for conducting IT examination for IT@SCHOOL.} 
-\cvline{}{Various scripts (Python\& shell) for System Administration.}
+\cvline{}{Various scripts (Python\& shell) for System Administration \& Embedded Automation.}
 \cvline{}{Linux OS Customization (Remastersys \& commandline)}
 \cvline{}{Hacking Microsoft Kinect using Processing and libfreenect libraries.}
 \cvline{}{Device Drivers \& Kernel Programming (Beginner)}
