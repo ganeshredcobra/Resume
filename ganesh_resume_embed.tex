@@ -112,13 +112,13 @@
 \section{Education}
 \cventry{2005--2009}{B.Tech, Applied Electronics \& Instrumentation Engineering}{University of Kerala}{}{}{}
 \cvline{College:}{\small P.A.Aziz College of Engineering \& Technology}
-\cvline{gpa:}{\small 6.04/10.0}
+\cvline{GPA:}{\small 6.04/10.0}
 \cventry{2003--2005}{Higher Secondary}{Biology+Maths Stream}{}{}{}
 \cvline{School:}{\small Govt Model Boys H S S Chalai, Trivandrum, Kerala}
-\cvline{gpa:}{\small 7.5/10.0}
+\cvline{Percentage:}{\small 75\%}
 \cventry{2002--2003}{Secondary School}{Science+Maths+English Stream}{}{}{}  % arguments 3 to 6 can be left empty
 \cvline{School:}{\small Govt Model Boys H S S Chalai, Trivandrum, Kerala}
-\cvline{gpa:}{\small 8.25/10.0}
+\cvline{Percentage:}{\small 82.50\%}
 
 \section{Work Experience}
 \cventry{August 2013 -- Present}{Embedded Software Engineer}{Deep Thought Systems Pvt Ltd}{}{}{
@@ -162,15 +162,15 @@ Worked as Lecturer cum Support Engineer in Department of Instrumentation and Aut
 \cvline{\textbf{Controller's}}
 {NXP - LPC 17XX Series. \newline
 FreeScale - i.MX 28 Series. \newline
-Microchip - PIC 16F877A,PIC 18F25K80.\newline
+Microchip - PIC 16F877A,PIC 18F25K80, MCP 2515.\newline
 Atmel AVR - ATmega8,ATmega168,ATmega328,tinyAVR.\newline
 Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series.
 }
 \cvline{\textbf{IDE's}}{Eclipse,Code Composer Studio,MPLab,Keil,Arduino.}
-\cvline{\textbf{Development Tools}}{GNU Tools,Git,SVN,Vim.}
+\cvline{\textbf{Development Tools}}{GNU Tools, Git, SVN, Vim.}
 \cvline{\textbf{CAN Tools}}{Microchip CAN Analyzer, CANMATE, VECTOR CANalyzer, NeoVI, Kvaser}
 \cvline{\textbf{Protocols}}{CAN, I2C, SPI, RS232.}
-\cvline{\textbf{Standards}}{ANSI C, J1979, J1939.}
+\cvline{\textbf{Standards}}{ANSI C, J1979, J1939, UDS.}
 \cvline{\textbf{Circuit/PCB Design}}{Eagle PCB,Kicad.}
 \cvline{\textbf{PLC's Used}}{Siemens-S7300(Simatic Manager),Siemens-S7200(Step7 Microwin),AB Micrologix 1000(RSLogix 500).}
 \cvline{\textbf{HMI}}{Siemens TP177B(Touch Panel).}
@@ -179,10 +179,11 @@ Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series.
 \section{Project Works}
 \cvline{Dthoughts Systems}{\textbf{Vehicle specific firmware development / Onsite Dev} - This was an Onsite assignment.The client is a famous automotive after market perfomance and race products company at California,USA.The task were to reverse engineer factory scantool and find vehicle specific pids and add that PID's to their existing firmware ,Add J1939 support to their existing firmware, Solve Dynamic PGN and add UDS support to the firmware.The controller used is LPC1768.}
 \cvline{Dthoughts Systems}{\textbf{CANMate Linux} - CANMATE is a high performing , low cost CAN to USB converter suitable to sniff any CAN network operating at or near full load and at full speed. Any CAN network can be analyzed using CANMATE device with the help of associated GUI tools.Was key player in developing GNU/Linux version of CANMate.Developed Linux packages and shared objects for the project.The product uses PIC18F25K80 controller.}
-\cvline{Dthoughts Systems}{\textbf{ECU Simulator Linux} - ECUSimLite Linux is a free PC application which uses CANMate device and CANMate API to implement ISO15765 compliant OBD2 ECU simulation.This can be used to test devices like OBD port readers without the need to connect to a vehicle.}
-\cvline{Dthoughts Systems}{\textbf{J1939 Simulator} - The J1939 simulator is a valuable tool for the development and testing of diagnostic programs and hardware. It simulates a Truck ECU .This simulator has 5 user-adjustable PIDs using 5 potentiometer , 5 live data can be changed and 6 fixed PGN values are provided. Pressing DTC button the trouble codes are generated and the MIL LED is ON. DM11 commands clear the DTCs and the MIL LED. Connection to the tester is provided via a J1962 female OBD port .ECU source address is 0x00.The Simulator supports DM1,DM5 \& DM11 Diagnostic Trouble Code messages.}
-\cvline{Dthoughts Systems}{\textbf{BSP porting and customization of LINUX on i.MX28 processor} - The aim of this project is to port and customize Board Support Package of Linux operating system on FreeScale i.MX28 processor based embedded board with the help of Linux Target Image Builder to configure WiFi and Bluetooth. The WiFi and Bluetooth driver is compiled with cross-compiler that released with i.mx28 linux BSP(LTIB) and installed its firmware.The wireless tools,bluetooth commands are used to configure WiFi and Bluetooth on board.Configured Linux Socket CAN interface to send and receive CAN messages.}
+\cvline{Dthoughts Systems}{\textbf{ComboSim 1000{(J1939 \& J1979 Simulator)} } - ComboSim 1000 is a small, lightweight, OBD bench simulator for OBD hardware and software development and testing.It supports both SAE J1939 and SAE J1979.This simulator has 5 user-adjustable PIDs using 5 potentiometer , 5 live data can be changed and 6 fixed values are provided. Pressing DTC button the trouble codes are generated and the MIL LED is ON.J1979 mode support both 11/29 bit,VIN,DTC and also supports Three default virtual ECU's: ECM, TCM, and ABS. J1939 mode supports DM1,DM5 and DM11 Diagnostic messages. Developed Hardware design and Firmware for the product, the product uses PIC18F25K80 controller.}
+\cvline{Dthoughts Systems}{\textbf{ECU Simulator Linux} - ECUSimLite Linux is a free PC application which uses CANMate device and CANMate API to implement ISO15765 compliant OBD2 ECU simulation.This can be used to test devices like OBD port readers without the need to connect to a vehicle.Supports Mode 01,Mode 03 and Mode 04. Five user variable parameters are available, supports Set \& Clear DTC along with logging facility. Completely coded in gcc.}
+\cvline{Dthoughts Systems}{\textbf{J1939 Simulator Linux} - J1939ECUSim is a PC application which uses our CANMate device and CANMate API to implement J1939 compliant ECU simulation.This simulator has 5 user-adjustable PGNs. The DTC button can be used to generate trouble codes. Some of SAE J1939 compliant DMs are implemented. Completely coded in gcc.}
 \cvline{Dthoughts Systems}{\textbf{Bluetooth Low Energy Project} - Implemented automatic SPPLE Server based pairing and communication between MSP430F5438A along with PAN 1323 BLE Module and smart phone.The project uses Bluetopia bluetooth stack by Stonestreet One.The project uses MSP-FET430UIF which is used to program and debug MSP430 FET tools and test boards through the JTAG interface.}
+\cvline{Dthoughts Systems}{\textbf{BSP porting and customization of LINUX on i.MX28 processor} - The aim of this project is to port and customize Board Support Package of Linux operating system on FreeScale i.MX28 processor based embedded board with the help of Linux Target Image Builder to configure WiFi and Bluetooth. The WiFi and Bluetooth driver is compiled with cross-compiler that released with i.mx28 linux BSP(LTIB) and installed its firmware.The wireless tools,bluetooth commands are used to configure WiFi and Bluetooth on board.Configured Linux Socket CAN interface to send and receive CAN messages.}
 \cvline{Dthoughts Systems}{\textbf{Streaming server in Beagle Bone Black} - Converting Beagle Bone Balck to video streaming server.The project uses MJPG streamer. MJPG-streamer takes JPGs from Linux-UVC compatible webcams, filesystem or other input plugins and streams them as M-JPEG via HTTP to webbrowsers, VLC and other software.}
 %\subsection{Academic Projects}
 \cvline{SPACE}{\textbf{Raspberry Pi based Remote Weather station} - The aim of project is to buils a remote weather station which can update details to a cloud platform where it can be plotted.In this project various sensors to measure temperature,relative humidity,rain and soil moisture is added.The microcontroller used is PIC16F877A.The controller board is connected to a Raspberry Pi via USBserial.The data is logged to a remote cloud server using python.}
@@ -219,7 +220,7 @@ Texas Instruments - MSP430 Launchpad,MSP430F5438A,C2000,Tiva C Series.
 \section{Trainings \& Workshops Undergone}
 \cvline{}{Attended training by SIEMENS on Simatic S7-300. The course included S7-300 series PLC’s programming, communication, connections, interfacing etc. Also a touch screen HMI panel – TP177B.}
 \cvline{}{Attended a workshop on Microcontroller based Robotics (level III) conducted by LI2 Innovations, Bangalore and Govt: Engineering College, Thrissur.(Arduino)}
-\cvline{}{Attended Robotics workshops conducted by IEEE.}
+\cvline{}{Attended TI MCU DeepDive 2013 conducted by Texas Instruments India.}
 
 \section{Achievements \& Activities}
 \cvline{}{Key Organiser Hardware Freedom Day 2013,Kerala.}
